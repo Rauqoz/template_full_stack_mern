@@ -17,6 +17,8 @@ const swagger_paths = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagge
 const swagger_schemas = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Schemas.json')));
 swagger_doc.definition.paths = swagger_paths;
 swagger_doc.definition.components = swagger_schemas;
+// Module DotEnv (create file ".env" in the folder "backend")
+const dot = require('dotenv').config();
 // Const port for Server or localhost in port 4000
 const port = process.env.PORT || 4000;
 
