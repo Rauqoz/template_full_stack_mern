@@ -12,9 +12,9 @@ const path = require('path');
 // Const routes for end-points
 const routes = require('../routes/routes');
 // Swagger Doc File
-const swagger_doc = JSON.parse(fs.readFileSync(path.join(__dirname, './swagger/doc_Title.json')));
-const swagger_paths = JSON.parse(fs.readFileSync(path.join(__dirname, './swagger/doc_Paths.json')));
-const swagger_schemas = JSON.parse(fs.readFileSync(path.join(__dirname, './swagger/doc_Schemas.json')));
+const swagger_doc = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Title.json')));
+const swagger_paths = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Paths.json')));
+const swagger_schemas = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Schemas.json')));
 swagger_doc.definition.paths = swagger_paths;
 swagger_doc.definition.components = swagger_schemas;
 // Const port for Server or localhost in port 4000
