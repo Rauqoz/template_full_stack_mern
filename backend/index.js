@@ -2,3 +2,5 @@
 const server_on = require('./server/server');
 // Module Socket IO (for use this, uncomment line "const io")
 // const io = require('./events/socket').listen(server_on);
+// Module Mongoose (for use this, uncomment line "const mongo_on")
+// const mongo_on = require('./mongodb/mongo_on');
