@@ -3,20 +3,10 @@ const express = require('express');
 const app = express();
 // Module Cors
 const cors = require('cors');
-// Module Swagger
-const swaggerIU = require('swagger-ui-express');
-const swaggerJsdoc = require('swagger-jsdoc');
-// Module FileSystem and Path
-const fs = require('fs');
-const path = require('path');
 // Const routes for end-points
 const routes = require('../routes/routes');
-// Swagger Doc File
-const swagger_doc = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Title.json')));
-const swagger_paths = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Paths.json')));
-const swagger_schemas = JSON.parse(fs.readFileSync(path.join(__dirname, '../swagger/doc_Schemas.json')));
-swagger_doc.definition.paths = swagger_paths;
-swagger_doc.definition.components = swagger_schemas;
+// Swagger Doc  end-point
+const swagger_doc = require('../swagger/swagger');
 // Module DotEnv (create file ".env" in the folder "backend")
 const dot = require('dotenv').config();
 // Const port for Server or localhost in port 4000
@@ -31,7 +21,7 @@ app.use(cors());
 app.use('/', routes);
 
 // Swagger Documentation
-app.use('/api-doc', swaggerIU.serve, swaggerIU.setup(swaggerJsdoc(swagger_doc)));
+app.use(swagger_doc);
 
 // Const Server
 const server_on = app.listen(port, (err) => {
