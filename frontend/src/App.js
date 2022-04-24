@@ -1,5 +1,7 @@
 import RoutesPath from './Routes/Routes';
-// Module Socket IO
+/* 
+    Check the folder "Components/Middlewares/SocketIO/SocketIO"
+*/
 // import './Components/Middlewares/SocketIO/SocketIO';
 
 function App() {
