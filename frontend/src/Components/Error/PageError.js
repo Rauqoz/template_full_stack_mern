@@ -1,12 +1,12 @@
 import React from 'react';
-import { TemplateS } from '../Templates/Styles/Template.styles';
+import { SPageError } from './Styles/PageError.styles';
 
 const PageError = () => {
 	return (
 		<div>
-			<TemplateS>
+			<SPageError>
 				<code>Page Error 404 :c</code>
-			</TemplateS>
+			</SPageError>
 		</div>
 	);
 };

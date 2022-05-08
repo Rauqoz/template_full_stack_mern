@@ -11,7 +11,7 @@ You need run the next command
 and for use, you need only uncomment this line on App.js
 
 ```javascript
-// import './Components/Middlewares/SocketIO/SocketIO';
+// import './Middlewares/SocketIO/SocketIO';
 ```
 
 >Remember create the file ".env" on the folder frontend with your key for use this environment variable (then restart your server):
