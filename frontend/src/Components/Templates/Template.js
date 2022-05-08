@@ -8,7 +8,8 @@ const Template = () => {
 	return (
 		<TemplateS>
 			<code>Rauqoz</code>
-			<button onClick={() => navigate('/child', { state: 'See the URL' })}>Go to Child</button>
+			<button onClick={() => navigate('/child', { state: 'Go Form Template (see the url)' })}>Go to Child</button>
+			<hr style={{ width: '80vw' }} />
 			<Outlet />
 		</TemplateS>
 	);
