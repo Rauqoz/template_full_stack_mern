@@ -1,4 +1,4 @@
-import axios from 'axios';
+import redaxios from 'redaxios';
 export const UPDATE_POKEMON = 'UPDATE_POKEMON';
 export const UPDATE_DATA_POKEMON = 'UPDATE_DATA_POKEMON';
 export const RESET = 'RESET';
@@ -28,16 +28,10 @@ export const reset_ = () => {
 export const search_pokemon_ = (poke) => {
 	return async (dispatch) => {
 		try {
-			var config = {
-				method: 'get',
-				url: `https://pokeapi.co/api/v2/pokemon/${poke}`,
-				headers: {}
-			};
-
-			const { data } = await axios(config);
+			const { data } = await redaxios.get(`https://pokeapi.co/api/v2/pokemon/${poke}`);
 			dispatch(update_data_pokemon_(data));
 		} catch (error) {
-			dispatch(update_data_pokemon_(`Error on Pokemon ${poke}`));
+			dispatch(update_data_pokemon_(`Error on Pokemon ${poke}!`));
 		}
 	};
 };
