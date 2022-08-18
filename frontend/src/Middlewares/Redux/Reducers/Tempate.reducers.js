@@ -1,4 +1,4 @@
-import { RESET, UPDATE_DATA_POKEMON, UPDATE_POKEMON } from '../Actions/Template.actions';
+import { RESET, UPDATE_DATA_POKEMON, UPDATE_POKEMON } from '../Actions/template.actions';
 
 const InitialState = {
 	pokemon: '',

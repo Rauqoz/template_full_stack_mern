@@ -31,7 +31,7 @@ export const search_pokemon_ = (poke) => {
 			const { data } = await redaxios.get(`https://pokeapi.co/api/v2/pokemon/${poke}`);
 			dispatch(update_data_pokemon_(data));
 		} catch (error) {
-			dispatch(update_data_pokemon_(`Error on Pokemon ${poke}`));
+			dispatch(update_data_pokemon_(`Error on Pokemon ${poke}!`));
 		}
 	};
 };

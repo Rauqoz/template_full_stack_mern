@@ -1,9 +1,9 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, legacy_createStore as createStore } from 'redux';
 import thunk from 'redux-thunk';
 // Example start --- you can remove from this line
-import Template_reducer_ from './Reducers/Tempate.reducers';
-const all_reducers = combineReducers({ Template_reducer_ });
+import Template_reducer_ from './Reducers/tempate.reducers';
 // Example end --- to this line if you dont need the template
+const all_reducers = combineReducers({ Template_reducer_ });
 
 const store = createStore(all_reducers, applyMiddleware(thunk));
 
