@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // Example start --- you can remove from this line
 import { Provider } from 'react-redux';
-import store from './Middlewares/Redux/Store';
+import store from './Middlewares/Redux/store';
 // Example end --- to this line if you dont need the template
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
