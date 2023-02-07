@@ -1,4 +1,4 @@
 module.exports = {
-	rootDir: './__tests__/e2e',
+	rootDir: './__tests__/template',
 	testMatch: [ '<rootDir>/*.test.js' ]
 };

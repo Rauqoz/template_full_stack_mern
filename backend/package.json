@@ -5,18 +5,20 @@
 	"main": "index.js",
 	"private": true,
 	"engines": {
-		"node": "14.x"
+		"node": ">=14.x"
 	},
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js",
-		"test:e2e": "jest --config=jest.e2e.js --forceExit"
+		"test:demo": "jest --config=jest.template.js --forceExit",
+		"audit": "audit-ci --config ./audit-ci.json"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
 		"@types/jest": "^28.1.7",
+		"audit-ci": "^6.6.1",
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.0",
 		"express": "^4.17.3",
