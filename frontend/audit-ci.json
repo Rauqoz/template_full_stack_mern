@@ -1,0 +1,4 @@
+{
+	"moderate": true,
+	"allowlist": [ "GHSA-rp65-9cf3-cjxr" ]
+}
